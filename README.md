@@ -4,7 +4,9 @@ This repository code is from our research project of large scale retention time 
 File iRT_alignment_4_from_reference_args.py:
 
 - Installed Python packages: argparse, csv, sys, random, scipy, numpy, sklearn, statistics
-- Running command format: ```python iRT_alignment_4_from_reference_args.py --evidence <evidence file with Maxquant output format> --reference <references set file> --output <output file exporting the alignment results>
+- Running command format:
+```
+python iRT_alignment_4_from_reference_args.py --evidence <evidence file with Maxquant output format> --reference <references set file> --output <output file exporting the alignment results>
 Example: python iRT_alignment_4_from_reference_args.py --evidence ./data/2f0a28e8c8fe43ec8c50256e117f52a2_evidence.tsv --reference ./data/29tissues_ref_set.txt --output ./data/2f0a28e8c8fe43ec8c50256e117f52a2_mean_absolute_errors.txt
 ```
 
