@@ -12,5 +12,7 @@ or: python iRT_alignment_4_from_reference_args.py --evidence ./data/fdc3b305405e
 ```
 
 Where the evidence file contains the information of identified peptides and should be in the Maxquant software's [output format](http://www.coxdocs.org/doku.php?id=maxquant:table:evidencetable). An example of the files can be found in the data folder of this Github repository or you can download one from [this workflow](https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=fdc3b305405e48508fe1fbf176186ba3) (by navigating to the button "Download results with mapped identifications" or "Download results directly from MaxQuant output").
+
 The references set file contains reference precursors selected and their assigned RTs that would be served as anchor precursors for alignment (you can find the detail of the alignment approach in our paper). Each line in the file should contain a pair of precursor and RT.
+
 The output file will report the alignment result - MAE (Mean Absolute Error) values for the run pairs in the evidence file. For the evaluation and analysis purpose, besides the primary MAEs in column "A and B after aligning", we also output MAEs obtained from the other approaches in the other columns. Each line in the output file will contain all MAE values from these different alignment approaches for each pair of runs.
