@@ -15,4 +15,4 @@ Where the evidence file contains the information of identified peptides and shou
 
 The references set file contains reference precursors selected and their assigned RTs that would be served as anchor precursors for alignment (you can find the detail of the alignment approach in our paper). Each line in the file should contain a pair of precursor and RT.
 
-The output file will report the alignment result for all the run pairs in the evidence file. Each line in the output file will contain MAE value before (in column `A and B originally`) and after (in column `A and B after aligning`) for each pair.
+The output file will report the alignment result for all the run pairs in the evidence file. Each line in the output file will contain MAE value before (in column `"A and B originally"`) and after (in column `"A and B after aligning"`) for each pair.
