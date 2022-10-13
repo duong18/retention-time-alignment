@@ -367,7 +367,7 @@ def MAE_calculation(fo, fh, inf, iRT, run_A, row_A, dict_B, split_count):    # r
             MAE = -1.0
             MAE_after_align = -1.0
         from_A_MAE.append(MAE)
-        fo.write('\t' + str(MAE_after_align) + '\t' + str(MAE))        
+        fo.write('\t' + str(MAE_after_align) + '\n')        
 
         ori_B = []
         ori_iRT = []
@@ -385,7 +385,6 @@ def MAE_calculation(fo, fh, inf, iRT, run_A, row_A, dict_B, split_count):    # r
             MAE = -1.0
             iRT_MAE = -1.0
         from_ref_MAE.append(MAE)
-        fo.write('\t' + str(MAE) + '\t' + str(iRT_MAE) + '\n')
         
     return ori_MAE, from_A_MAE, from_ref_MAE
 
@@ -405,7 +404,7 @@ def main():
     name_set_A = list(dict_B.keys())
     random.shuffle(name_set_A)
     fo = open(args_output, 'w')
-    fo.write("Run A\tRun B\tA and B originally\tA and B after aligning\tFrom A\tFrom Refs with alignment\tFrom Refs without alignment\n")
+    fo.write("Run A\tRun B\tA and B originally\tA and B after aligning\n")
     fh = open(args_output.replace(".txt", ".his"), 'w')
     fh.write("precursor" + '\t' + "split count on run A" +  '\t' + "split count on run B" + '\t' + "run A" + '\t' + "run B" + '\t' + "RT on run A" + '\t' + "RT on run B" + '\t' + "aligned RT for A" + '\t' + "aligned RT for B" + '\t' + "ref RT" + '\n')
 
